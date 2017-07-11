@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+  <title>Simon Says</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="css/simon.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/simon.js"></script>
+
+  <audio id="redSound" preload="auto">
+    <source src="resources/redbeep.wav" type="audio/wav" ></source>
+  </audio>
+  <audio id="greenSound" preload="auto">
+    <source src="resources/greenbeep.mp3" type= "audio/mpeg"></source>
+  </audio>
+  <audio id="blueSound" preload="auto">
+    <source src="resources/bluebeep.wav" type="audio/wav"></source>
+  </audio>
+</head>
+
+<body>
+  <h1>Simon Says</h1>
+  </br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <button id="red" class="gamebtn btn-lg btn-danger"> Red </button>
+       </div>
+      <div class= "col-md-4">
+        <button id="green" class="gamebtn btn-lg btn-success">Green</button> 
+      </div>
+      <div class="col-md-4">
+        <button id= "blue" class="gamebtn btn-primary btn-lg"> Blue </button>
+      </div>
+    </div> 
+  </div>
+  </br></br>
+  <div style="text-align:center;">
+    <button id="start" class="btn-lg btn">Start</button>
+  </div>
+</body>
+
+<footer>
+<p>Credits to Danielle Howard</p>
+</footer>

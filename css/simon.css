@@ -1,0 +1,32 @@
+body {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+    background-image: url("../resources/background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #00ccff;
+}
+.gamebtn {
+  border-radius: 40px;
+}
+.brightRed {
+    background-color:#ff0000 !important;
+}
+.brightGreen {
+  background-color:#33FF00 !important;
+}
+.brightBlue {
+  background-color:#0000FF !important; 
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  position:fixed;
+  bottom:0;
+  text-align: center;
+}
+
