@@ -94,12 +94,23 @@ function compareClicks() {
   var audioRed = $("#redSound")[0];
   var audioGreen = $("#greenSound")[0];
   var audioBlue = $("#blueSound")[0];
+
+  function turnButtonOffGreen() {
+    setTimeout(function(){$("#green").removeClass("brightGreen"); }, 3000);
+  }
+  function turnButtonOffRed() {
+    setTimeout(function(){$("#red").removeClass("brightRed"); }, 3000);
+  }
+  function turnButtonOffBlue() {
+    setTimeout(function(){$("#blue").removeClass("brightBlue"); }, 3000);
+  }
  
   function testRed() {
     $("#green").removeClass("brightGreen");
     $("#blue").removeClass("brightBlue");
     $("#red").addClass("brightRed");
     audioRed.play();
+    turnButtonOffRed();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
@@ -113,6 +124,7 @@ function compareClicks() {
     $("#blue").removeClass("brightBlue");
     $("#green").addClass("brightGreen");
     audioGreen.play();
+    turnButtonOffGreen();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
@@ -126,6 +138,7 @@ function compareClicks() {
     $("#green").removeClass("brightGreen");
     $("#blue").addClass("brightBlue");
     audioBlue.play();
+    turnButtonOffBlue();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
