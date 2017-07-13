@@ -65,7 +65,7 @@ function compareClicks() {
 }
 
   function createClick() {
-    interval = setInterval(clickOnOneItem, 1000);
+    interval = setInterval(clickOnOneItem, 1500);
   }
  
   function clickOnOneItem() {
@@ -96,18 +96,16 @@ function compareClicks() {
   var audioBlue = $("#blueSound")[0];
 
   function turnButtonOffGreen() {
-    setTimeout(function(){$("#green").removeClass("brightGreen"); }, 3000);
+    setTimeout(function(){$("#green").removeClass("brightGreen"); }, 1000);
   }
   function turnButtonOffRed() {
-    setTimeout(function(){$("#red").removeClass("brightRed"); }, 3000);
+    setTimeout(function(){$("#red").removeClass("brightRed"); }, 1000);
   }
   function turnButtonOffBlue() {
-    setTimeout(function(){$("#blue").removeClass("brightBlue"); }, 3000);
+    setTimeout(function(){$("#blue").removeClass("brightBlue"); }, 1000);
   }
  
-  function testRed() {
-    $("#green").removeClass("brightGreen");
-    $("#blue").removeClass("brightBlue");
+  function btnRed() {
     $("#red").addClass("brightRed");
     audioRed.play();
     turnButtonOffRed();
@@ -119,9 +117,7 @@ function compareClicks() {
     }
   }
  
-  function testGreen() {
-    $("#red").removeClass("brightRed");
-    $("#blue").removeClass("brightBlue");
+  function btnGreen() {
     $("#green").addClass("brightGreen");
     audioGreen.play();
     turnButtonOffGreen();
@@ -133,9 +129,7 @@ function compareClicks() {
     }
   }
  
-  function testBlue() {
-    $("#red").removeClass("brightRed");
-    $("#green").removeClass("brightGreen");
+  function btnBlue() {
     $("#blue").addClass("brightBlue");
     audioBlue.play();
     turnButtonOffBlue();
@@ -153,14 +147,14 @@ function compareClicks() {
   }
  
   $("#red").click(function() {
-    testRed();
+    btnRed();
   });
  
   $("#green").click(function() {
-    testGreen();
+    btnGreen();
   });
  
   $("#blue").click(function() {
-    testBlue();
+    btnBlue();
   });
 });
