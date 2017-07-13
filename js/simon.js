@@ -65,7 +65,7 @@ function compareClicks() {
 }
 
   function createClick() {
-    interval = setInterval(clickOnOneItem, 1000);
+    interval = setInterval(clickOnOneItem, 1500);
   }
  
   function clickOnOneItem() {
@@ -94,12 +94,21 @@ function compareClicks() {
   var audioRed = $("#redSound")[0];
   var audioGreen = $("#greenSound")[0];
   var audioBlue = $("#blueSound")[0];
+
+  function turnButtonOffGreen() {
+    setTimeout(function(){$("#green").removeClass("brightGreen"); }, 1000);
+  }
+  function turnButtonOffRed() {
+    setTimeout(function(){$("#red").removeClass("brightRed"); }, 1000);
+  }
+  function turnButtonOffBlue() {
+    setTimeout(function(){$("#blue").removeClass("brightBlue"); }, 1000);
+  }
  
-  function testRed() {
-    $("#green").removeClass("brightGreen");
-    $("#blue").removeClass("brightBlue");
+  function btnRed() {
     $("#red").addClass("brightRed");
     audioRed.play();
+    turnButtonOffRed();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
@@ -108,11 +117,10 @@ function compareClicks() {
     }
   }
  
-  function testGreen() {
-    $("#red").removeClass("brightRed");
-    $("#blue").removeClass("brightBlue");
+  function btnGreen() {
     $("#green").addClass("brightGreen");
     audioGreen.play();
+    turnButtonOffGreen();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
@@ -121,11 +129,10 @@ function compareClicks() {
     }
   }
  
-  function testBlue() {
-    $("#red").removeClass("brightRed");
-    $("#green").removeClass("brightGreen");
+  function btnBlue() {
     $("#blue").addClass("brightBlue");
     audioBlue.play();
+    turnButtonOffBlue();
     if (userTurn === true) {
       console.log("it is logging user clicks");
       console.log("pushing " + "blue" + " into userClicks")
@@ -140,14 +147,14 @@ function compareClicks() {
   }
  
   $("#red").click(function() {
-    testRed();
+    btnRed();
   });
  
   $("#green").click(function() {
-    testGreen();
+    btnGreen();
   });
  
   $("#blue").click(function() {
-    testBlue();
+    btnBlue();
   });
 });
