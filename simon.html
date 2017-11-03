@@ -2,46 +2,90 @@
 <head>
   <title>Simon Says</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-  <link rel="stylesheet" href="css/simon.css">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/simon.js"></script>
+  <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/simon.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+  <script src="./js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="./js/bootstrap-3.3.7.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="./js/simon.js"></script>
 
   <audio id="redSound" preload="auto">
-    <source src="resources/redbeep.wav" type="audio/wav" ></source>
+    <source src="./resources/redbeep.wav" type="audio/wav" ></source>
   </audio>
   <audio id="greenSound" preload="auto">
-    <source src="resources/greenbeep.mp3" type= "audio/mpeg"></source>
+    <source src="./resources/greenbeep.mp3" type= "audio/mpeg"></source>
   </audio>
   <audio id="blueSound" preload="auto">
-    <source src="resources/bluebeep.wav" type="audio/wav"></source>
+    <source src="./resources/bluebeep.wav" type="audio/wav"></source>
   </audio>
+
 </head>
-
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <a class="adjustNav navbar-brand" href="/">Home</a> <button class="navbar-toggle" data-target=".navHeaderCollapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <div class="collapse navbar-collapse navHeaderCollapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a class="adjustNav" href="skills.html">Skills</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle adjustNav" data-toggle="dropdown" href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li class="adjustNav">
+              <a href="simon.html">Simon Says</a>
+            </li>
+            <li></li>
+            <li class="adjustNav">
+              <a href="tictactoe.html">Tic Tac Toe</a>
+            </li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <body>
-  <h1>Simon Says</h1>
-  </br>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
-        <button id="red" class="gamebtn btn-lg btn-danger"> Red </button>
-       </div>
-      <div class= "col-md-4">
-        <button id="green" class="gamebtn btn-lg btn-success">Green</button> 
-      </div>
-      <div class="col-md-4">
-        <button id= "blue" class="gamebtn btn-primary btn-lg"> Blue </button>
-      </div>
-    </div> 
+</br> </br>
+<div id="image">
+<h1>Simon Says</h1>
+</br>
+<div class="row">
+  <div class="col-md-4 col-xs-4">
+    <button id="red" class="gamebtn btn-lg btn-danger"> Red </button>
   </div>
-  </br></br>
-  <div style="text-align:center;">
-    <button id="start" class="btn-lg btn">Start</button>
+  <div class= "col-md-4 col-xs-4">
+    <button id="green" class="gamebtn btn-lg btn-success">Green</button>
   </div>
+  <div class="col-md-4 col-xs-4">
+    <button id= "blue" class="gamebtn btn-primary btn-lg"> Blue </button>
+  </div></div>
+</br></br>
+<div class="text-center"><button id= "start" class= "btn-lg btn-info btn-default">What does Simon Say?</button></div>
+  <div class="text-center"><button id= "start" class= "btn-lg btn-info btn-default">Reset Game</button></div>
+</div>
+  <footer>
+    <p> &copy Danielle Howard</p>
+  </footer>
 </body>
-
-<footer>
-<p>Credits to Danielle Howard</p>
-</footer>
+</html>

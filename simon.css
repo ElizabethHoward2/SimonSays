@@ -1,0 +1,40 @@
+body {
+  text-align: center;
+  min-height: 100%;
+
+}
+#image {
+  height: 100vh;
+  background-image:
+          linear-gradient(
+                  rgba(0, 0, 0, 0.4),
+                  rgba(0, 0, 0, 0.4)
+          ),
+          url("../resources/simonBackground.jpeg");
+  background-size: 100% 100%;
+}
+.gamebtn {
+  border-radius: 40px;
+}
+.brightRed
+{
+  background-color:#ff0000 !important;
+}
+.brightGreen {
+  background-color:#33FF00 !important;
+}
+.brightBlue {
+  background-color:#0000FF !important;
+}
+#start {
+  border-radius: 40px;
+}
+#reset {
+  border-radius: 40px;
+}
+html {
+  height: 100%
+}
+footer {
+  background-color: #5DADE2;
+}
