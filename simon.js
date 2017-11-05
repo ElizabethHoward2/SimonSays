@@ -16,13 +16,7 @@ $(document).ready(function() {
     var audioRed = $("#redSound")[0];
     var audioGreen = $("#greenSound")[0];
     var audioBlue = $("#blueSound")[0];
-
-    //navbar hover menu
-    $('ul.nav li.dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500); //hover shows menu
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);  //hide dropdown after hover
-    });
+    
 
     // will be called on click
     function fullTurn() {
@@ -114,4 +108,10 @@ $(document).ready(function() {
     $("#blue").click(btnClick);
 
     $("#start").click(fullTurn);
+
+    $("#reset").click(reloadPage);
+
+    function reloadPage() {
+        location.reload(true);
+    }
 });
